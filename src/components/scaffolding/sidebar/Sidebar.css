@@ -10,11 +10,38 @@
   line-height: normal;
   overflow-x: hidden;
   height: calc(100vh - var(--header-height) - var(--footer-height) );
+  margin-left: 0px;
+}
+
+.sidebar-container.sidebar-reopened {
+  margin-left: 0px;
+  animation: .25s 1 alternate slidein;
 }
 
 .sidebar-container.sidebar-closed {
-  width: 0px;
+  margin-left: calc(var(--sidebar-width-open) * -1);
   border-right: none;
+  animation: .25s 1 alternate slideout;
+}
+
+@keyframes slideout {
+  from {
+    margin-left: 0px;
+  }
+
+  to {
+    margin-left: calc(var(--sidebar-width-open) * -1);
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: calc(var(--sidebar-width-open) * -1);
+  }
+
+  to {
+    margin-left: 0px;
+  }
 }
 
 .sidebar-wrapper {

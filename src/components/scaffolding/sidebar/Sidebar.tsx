@@ -13,6 +13,8 @@ export function Sidebar(props: SidebarProps) {
     switch (mode) {
       case 'closed':
         return 'sidebar-container sidebar-closed'
+      case 'reopened':
+        return 'sidebar-container sidebar-reopened'
     }
     return 'sidebar-container'
   }, [mode])

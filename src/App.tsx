@@ -12,12 +12,11 @@ function App() {
   const appDivID = (import.meta.env.VITE_appCompanyName || 'app').toLowerCase().replaceAll(' ', '')
 
   const toggleSidebar = () => {
-    setSidebarMode((m) => {
-      if (m === 'open') {
-        return 'closed'
-      }
-      return 'open'
-    })
+    if (sidebarMode === 'open' || sidebarMode == 'reopened') {
+      setSidebarMode('closed')
+      return
+    }
+    setSidebarMode('reopened')
   }
 
   return (
@@ -26,7 +25,9 @@ function App() {
       <div id={appDivID} className="app-main-section">
         <Sidebar mode={sidebarMode} />
         <main>
-          <Outlet />
+          <div className="outlet-container">
+            <Outlet />
+          </div>
         </main>
       </div>
       <Footer />
