@@ -1,0 +1,8 @@
+.app-main-section {
+  display: flex;
+}
+
+main {
+  margin-left: 10px;
+  margin-top: 5px;
+}

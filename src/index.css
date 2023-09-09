@@ -1,0 +1,56 @@
+:root {
+
+  --header-height: 43px;
+  --footer-height: 43px;
+  --sidebar-width-open: 240px;
+
+  /* global values irrespective of light/dark mdoe */
+  --app-blue: #0577F9;
+  --app-light: #f0f0f0;
+  --app-white: white;
+  --app-black: black;
+  --app-green: #24b239;
+  --app-green-bright: #38c64d;
+  --app-charcoal: #141719;
+  --app-light-gray: #e3e4e6;
+  --app-medium-gray: #c0c2c4;
+  --app-light-blue: #48a6f0;
+  --app-subtle-color: #666666cc;
+
+  /* Default Color Values - darkMode */
+  --header-bg-color: var(--app-charcoal);
+  --header-border-color: #424244;
+
+  --body-color: #f5f4f3;
+  --body-bg-color: #252628;
+
+  --icon-active: var(--app-light-blue);
+}
+
+[data-theme="lightMode"] {
+  /* Color Values - lightMode */
+  --header-bg-color: var(--app-charcoal);
+}
+
+[data-theme="highContrastMode"] {
+  /* Color Values - highContrastMode */
+  --header-bg-color: var(--app-black);
+}
+
+body {
+  color: var(--body-color);
+  background-color: var(--body-bg-color);
+}
+
+.action-icon {
+  height: 20px;
+}
+
+.action-icon:hover {
+  color: var(--icon-active);
+  cursor: pointer;
+}
+
+.subtle-color {
+  color: var(--app-subtle-color);
+}
