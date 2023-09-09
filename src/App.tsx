@@ -12,7 +12,7 @@ function App() {
   const appDivID = (import.meta.env.VITE_appCompanyName || 'app').toLowerCase().replaceAll(' ', '')
 
   const toggleSidebar = () => {
-    if (sidebarMode === 'open' || sidebarMode == 'reopened') {
+    if (sidebarMode !== 'closed') {
       setSidebarMode('closed')
       return
     }
