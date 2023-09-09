@@ -10,13 +10,11 @@ export function Sidebar(props: SidebarProps) {
   const { mode } = props
 
   const classes = useMemo(() => {
-    switch (mode) {
-      case 'closed':
-        return 'sidebar-container sidebar-closed'
-      case 'reopened':
-        return 'sidebar-container sidebar-reopened'
+    const baseClasses = 'sidebar-container'
+    if (mode) {
+      return `${baseClasses} sidebar-${mode}`
     }
-    return 'sidebar-container'
+    return baseClasses
   }, [mode])
 
   return (

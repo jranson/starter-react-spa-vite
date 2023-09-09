@@ -18,6 +18,11 @@
   animation: .25s 1 alternate slidein;
 }
 
+.sidebar-container.sidebar-preclosed {
+  margin-left: calc(var(--sidebar-width-open) * -1);
+  border-right: none;
+}
+
 .sidebar-container.sidebar-closed {
   margin-left: calc(var(--sidebar-width-open) * -1);
   border-right: none;

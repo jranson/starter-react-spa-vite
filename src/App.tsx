@@ -6,16 +6,20 @@ import { Header } from './components/scaffolding/header/Header'
 import { Sidebar } from './components/scaffolding/sidebar/Sidebar'
 
 function App() {
+  
+  const [sidebarMode, setSidebarMode] = useState(
+    localStorage.getItem('sidebar.mode') === 'preclosed' ? 'preclosed' : 'open')
 
-  const [sidebarMode, setSidebarMode] = useState('open')
-
-  const appDivID = (import.meta.env.VITE_appCompanyName || 'app').toLowerCase().replaceAll(' ', '')
+  const appDivID = (import.meta.env.VITE_appCompanyName || 'app').toLowerCase()
+    .replaceAll(' ', '')
 
   const toggleSidebar = () => {
-    if (sidebarMode !== 'closed') {
+    if (sidebarMode !== 'closed' && sidebarMode !== 'preclosed') {
       setSidebarMode('closed')
+      localStorage.setItem('sidebar.mode', 'preclosed')
       return
     }
+    localStorage.setItem('sidebar.mode', 'reopened')
     setSidebarMode('reopened')
   }
 
