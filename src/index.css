@@ -1,46 +1,237 @@
+@charset "UTF-8";
+
 :root {
 
-  --header-height: 43px;
+  /* non-color global values */
+  --button-border-radius: 20px;
+  --font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
   --footer-height: 43px;
+  --header-height: 43px;
+  --input-border-radius: 5px;
+  --line-height: 1.5;
+  --modal-shadow: rgba(0, 4, 8, 1);
+  --panel-shadow: 3px 3px 6px black;
   --sidebar-width-open: 240px;
-
-  /* global values irrespective of light/dark mdoe */
-  --app-blue: #0577F9;
-  --app-light: #f0f0f0;
-  --app-white: white;
-  --app-black: black;
-  --app-green: #24b239;
-  --app-green-bright: #38c64d;
-  --app-charcoal: #141719;
-  --app-light-gray: #e3e4e6;
-  --app-medium-gray: #c0c2c4;
+ 
+  /* global color values irrespective of light/dark mdoe */
+  --app-blue: #2070f0;
   --app-light-blue: #48a6f0;
+  --app-green: #24b239;
+  --app-red: #cc2222;
+  --app-yellow: #f0c030;
+  --app-off-white: #f5f4f3;
+  --app-charcoal: #141719;
+  --app-light-gray: #e0e2e4;
+  --app-medium-gray: #c0c2c4;
   --app-subtle-color: #666666cc;
 
-  /* Default Color Values - darkMode */
+  /* Dark Mode Color Values - darkMode */
+  --app-link-color: var(--app-light-blue);
+  
+  --body-color: var(--app-off-white);
+  --body-bg-color: #252628;
+
+  --button-blue-bg-color: var(--app-link-color);
+  --button-green-bg-color: var(--app-green);
+  --button-red-bg-color: var(--app-red);
+  --button-yellow-bg-color: var(--app-yellow);
+
+  --form-row-hover: #242628;
+  --general-border-color: var(--header-border-color);
+
   --header-bg-color: var(--app-charcoal);
   --header-border-color: #424244;
 
-  --body-color: #f5f4f3;
-  --body-bg-color: #252628;
+  --highlight-color: var(--app-green);
 
   --icon-active: var(--app-light-blue);
+
+  --input-bg-color: #080a0c;
+  --input-border-color: var(--header-border-color);
+
+  --menu-hover-bg-color: var(--form-row-hover);
+  --menu-bg-color: #0a0e10;
+
+  --panel-bg-color: var(--sidebar-bg-color);
+
+  --reversible-dark-color: var(--body-color);
+  --reversible-light-color: var(--body-bg-color);
+  --reversible-black: white;
+  --reversible-white: black;
+
+  --shader-color: #6669;
+
+  --sidebar-bg-color: #404040;
 }
 
 [data-theme="lightMode"] {
-  /* Color Values - lightMode */
+  /* Light Mode Color Values - lightMode */
+  --app-link-color: var(--app-blue);
+  --body-color: #252628;
+  --body-bg-color: var(--app-off-white);
+  --button-blue-bg-color: var(--app-blue);
+  --button-green-bg-color: var(--app-green);
+  --button-red-bg-color: var(--app-red);
   --header-bg-color: var(--app-charcoal);
+  --header-border-color: #ccc;
+  --input-bg-color: #f2f1f0;
+  --menu-bg-color: #e8e6e4;
+  --menu-hover-bg-color: #c5c4c3;
+  --panel-shadow: 3px 3px 6px var(--general-border-color);
+  --reversible-dark-color: var(--body-color);
+  --reversible-light-color: var(--body-bg-color);
+  --reversible-black: black;
+  --reversible-white: white;
+  --shader-color: #3333;
+  --sidebar-bg-color: var(--menu-bg-color);
 }
 
 [data-theme="highContrastMode"] {
-  /* Color Values - highContrastMode */
-  --header-bg-color: var(--app-black);
+  /* High Contrast Mode Color Values - highContrastMode */
+  --app-link-color: #1144cc;
+  --body-color: black;
+  --body-bg-color: white;
+  --button-blue-bg-color: var(--app-link-color);
+  --button-green-bg-color: #009900;
+  --button-red-bg-color: #cc0000;
+  --header-bg-color: black;
+  --header-border-color: black;
+  --input-bg-color: white;
+  --menu-bg-color: #f0f0f0;
+  --menu-hover-bg-color: #d0d0d0;
+  --panel-shadow: 1px 1px 0px var(--general-border-color);
+  --reversible-dark-color: black;
+  --reversible-light-color: white;
+  --reversible-black: black;
+  --reversible-white: white;
+  --shader-color: #3333;
+  --sidebar-bg-color: var(--menu-bg-color);
+}
+
+/* base html elements */
+
+html {
+  position: relative;
+  min-height: 100%;
 }
 
 body {
+  font-size: 1rem;
   color: var(--body-color);
   background-color: var(--body-bg-color);
+  font-family: var(--font-sans-serif);
+  margin: 0px 0px 0px 0px;
+  line-height: var(--line-height);
+  -webkit-text-size-adjust: 100%;
+  font-weight: 400;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+a,
+a:link,
+a:visited,
+a.normal,
+a.normal:link,
+a.normal:visited {
+  color: var(--app-link-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+a.normal:hover,
+.link:hover {
+  color: var(--app-link-color);
+  text-decoration: underline;
+}
+
+a:active,
+a.normal:active,
+.link:active {
+  color: var(--app-link-color);
+  text-decoration: none;
+}
+
+a.no-underline,
+a:link.no-underline,
+a:visited.no-underline,
+a:hover.no-underline,
+a:active.no-underline {
+  text-decoration: none;
+}
+
+a.inactive,
+a.inactive:link,
+a.inactive:visited,
+a.inactive:active,
+a.inactive:hover {
+  color: var(--app-inactive-color);
+  text-decoration: none;
+}
+
+input, textarea, select {
+  outline: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+input::placeholder, textarea::placeholder {
+  font-style: italic;
+}
+
+input.input-control,
+input.input-control:active,
+input.input-control:focus,
+textarea.textarea-control {
+  background-color: var(--input-bg-color);
+  border: 1px solid var(--input-border-color);
+  color: var(--body-color);
+}
+
+input.wide, textarea.wide, select.wide, .input-control.wide, div.wide {
+  width: 100%;
+}
+
+input.input-control:disabled,
+.input-control.disabled,
+.input-control.disabled:active {
+  background-color: var(--form-control-bg-color);
+  color: var(--app-subtle-color);
+  border-color: var(--app-subtle-color);
+  cursor: default;
+}
+
+input.input-control:disabled::placeholder,
+.input-control.disabled::placeholder {
+  color: var(--app-subtle-color);
+}
+
+/* Positioning */
+.flex-middle {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+/* Colors */
+.color-dark {
+  color: var(--app-charcoal) !important;
+}
+
+.color-white {
+  color: white !important;
+}
+
+.color-subtle {
+  color: var(--app-subtle-color);
+}
+
+.add-border-bottom {
+  border-bottom: 1px var(--general-border-color) solid;
+}
+
+/* Icons and Buttons (common) */
 
 .action-icon {
   height: 20px;
@@ -49,8 +240,4 @@ body {
 .action-icon:hover {
   color: var(--icon-active);
   cursor: pointer;
-}
-
-.subtle-color {
-  color: var(--app-subtle-color);
 }

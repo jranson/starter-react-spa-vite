@@ -4,6 +4,7 @@ import { Outlet } from './components/Outlet'
 import { Footer } from './components/scaffolding/footer/Footer'
 import { Header } from './components/scaffolding/header/Header'
 import { Sidebar } from './components/scaffolding/sidebar/Sidebar'
+import { PrefsProvider } from './prefs/PrefsContext'
 
 function App() {
   
@@ -24,18 +25,20 @@ function App() {
   }
 
   return (
-    <div id="app-container">
-      <Header hamburgerToggle={toggleSidebar} />
-      <div id={appDivID} className="app-main-section">
-        <Sidebar mode={sidebarMode} />
-        <main>
-          <div className="outlet-container">
-            <Outlet />
-          </div>
-        </main>
+    <PrefsProvider>
+      <div id="app-container">
+        <Header hamburgerToggle={toggleSidebar} />
+        <div id={appDivID} className="app-main-section">
+          <Sidebar mode={sidebarMode} />
+          <main>
+            <div className="outlet-container">
+              <Outlet />
+            </div>
+          </main>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </PrefsProvider>
   )
 }
 

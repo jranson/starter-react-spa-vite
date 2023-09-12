@@ -1,0 +1,42 @@
+.picklist-link {
+    color: var(--body-color);
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #FFFFFF00;
+    padding: 3px 6px 3px 6px;
+    border-radius: 4px;
+    margin-left: .5px;
+    margin-right: .5px;
+  }
+  
+  @media (hover: hover) {
+    .picklist-link:hover {
+      border: 1px dashed var(--body-color);
+      text-decoration: none;
+    }
+  }
+  
+  .picklist-link:last-child {
+    margin-right: 0px;
+  }
+  
+  .picklist-link-selected {
+    color: var(--body-bg-color);
+    background-color: var(--reversible-dark-color);
+  }
+  
+  @media (hover: hover) {
+    .picklist-link-selected:hover {
+      color: var(--app-bg-color);
+      background-color: var(--reversible-dark-color);
+      border: 1px solid #FFFFFF00;
+      text-decoration: none;
+    }
+  }
+  
+  .light-panel-box {
+    background-color: var(--input-bg-color);
+    border: 1px solid var(--general-border-color);
+    border-radius: calc(var(--input-border-radius) - 2px);
+    cursor: default;
+  }

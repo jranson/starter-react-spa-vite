@@ -1,0 +1,344 @@
+button.button-basic,
+div.button-basic,
+label.button-basic,
+a.button-basic {
+  font-size: 14px;
+  padding: 6px 16px;
+  font-weight: 600;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  outline: 0 none;
+  border-radius: var(--button-border-radius);
+  border: none;
+  height: 36px;
+  max-height: 36px;
+  color: var(--body-bg-color);
+  background: none;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+button.button-basic.button-sm,
+div.button-basic.button-sm,
+label.button-basic.button-sm,
+a.button-basic.button-sm {
+  line-height: 1;
+  height: 28px !important;
+  padding: 2px 4px;
+}
+
+div.button-basic {
+  padding-top: 7px;
+}
+
+label.button-basic {
+  padding: 7.5px 17.5px 7.5px 17.5px !important;
+}
+
+label.button-basic.button-outline {
+  padding: 6px 16px 6px 16px !important;
+}
+
+label.button-basic.button-sm {
+  padding: 6.5px 14.5px !important;
+}
+
+label.button-basic.button-outline.button-sm {
+  padding: 5px 13px !important;
+}
+
+div.button-basic.button-outline {
+  padding-top: 6px;
+}
+
+button.button-basic:hover,
+div.button-basic:hover,
+label.button-basic:hover,
+a.button-basic:hover {
+  box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.15);
+}
+
+button.button-basic:active,
+button.button-basic:active:hover,
+div.button-basic:active,
+div.button-basic:active:hover,
+label.button-basic:active,
+label.button-basic:active:hover,
+a.button-basic:active,
+a.button-basic:active:hover {
+  box-shadow: inset 0em 0em 0em 10em rgba(0, 0, 0, 0.15);
+}
+
+/* Colors */
+
+/* Blue */
+a.button-blue,
+button.button-blue,
+label.button-blue,
+div.button-blue {
+  background-color: var(--button-blue-bg-color);
+}
+
+button.button-blue.button-outline,
+a.button-blue.button-outline,
+label.button-blue.button-outline,
+div.button-blue.button-outline {
+  border: 1.5px solid var(--button-blue-bg-color);
+  color: var(--button-blue-bg-color);
+}
+
+button.button-blue.button-outline:hover,
+button.button-blue.button-outline:active,
+div.button-blue.button-outline:hover,
+div.button-blue.button-outline:active,
+label.button-blue.button-outline:hover,
+label.button-blue.button-outline:active,
+a.button-blue.button-outline:hover,
+a.button-blue.button-outline:active {
+  background-color: var(--button-blue-bg-color);
+}
+
+/* Green */
+a.button-green,
+div.button-green,
+label.button-green,
+button.button-green {
+  background-color: var(--button-green-bg-color);
+}
+
+a.button-green.button-outline,
+div.button-green.button-outline,
+label.button-green.button-outline,
+button.button-green.button-outline {
+  border: 1.5px solid var(--button-green-bg-color);
+  color: var(--button-green-bg-color);
+}
+
+a.button-green.button-outline:hover,
+a.button-green.button-outline:active,
+div.button-green.button-outline:hover,
+div.button-green.button-outline:active,
+label.button-green.button-outline:hover,
+label.button-green.button-outline:active,
+button.button-green.button-outline:hover,
+button.button-green.button-outline:active {
+  background-color: var(--button-green-bg-color);
+}
+
+/* Red */
+a.button-red,
+div.button-red,
+label.button-red,
+button.button-red {
+  background-color: var(--button-red-bg-color);
+}
+
+button.button-red.button-outline,
+div.button-red.button-outline,
+label.button-red.button-outline,
+a.button-red.button-outline {
+  border: 1.5px solid var(--button-red-bg-color);
+  color: var(--button-red-bg-color);
+}
+
+button.button-red.button-outline:hover,
+button.button-red.button-outline:active,
+a.button-red.button-outline:hover,
+a.button-red.button-outline:active,
+label.button-red.button-outline:hover,
+label.button-red.button-outline:active,
+div.button-red.button-outline:hover,
+div.button-red.button-outline:active  {
+  background-color: var(--button-red-bg-color);
+}
+
+/* Yellow */
+a.button-yellow,
+div.button-yellow,
+label.button-yellow,
+button.button-yellow {
+  background-color: var(--button-yellow-bg-color);
+}
+
+a.button-yellow.button-outline,
+div.button-yellow.button-outline,
+label.button-yellow.button-outline,
+button.button-yellow.button-outline {
+  border: 1.5px solid var(--button-yellow-bg-color);
+  color: var(--button-yellow-bg-color);
+}
+
+button.button-yellow.button-outline:hover,
+button.button-yellow.button-outline:active,
+div.button-yellow.button-outline:hover,
+div.button-yellow.button-outline:active,
+label.button-yellow.button-outline:hover,
+label.button-yellow.button-outline:active,
+a.button-yellow.button-outline:hover,
+a.button-yellow.button-outline:active {
+  background-color: var(--button-yellow-bg-color);
+}
+
+/* Black */
+a.button-black,
+div.button-black,
+label.button-black,
+button.button-black {
+  background-color: var(--reversible-black);
+  color: var(--reversible-white);
+}
+
+a.button-black:hover,
+div.button-black:hover,
+label.button-black:hover,
+button.button-black:hover {
+  box-shadow: inset 0 0 0 10em rgba(153, 153, 153, 0.3);
+}
+
+a.button-black:active,
+button.button-black:active,
+div.button-black:active,
+a.button-black:active:hover,
+button.button-black:active:hover,
+div.button-black:active:hover,
+label.button-black:active,
+label.button-black:active:hover {
+  box-shadow: inset 0 0 0 10em rgba(153, 153, 153, 0.45);
+}
+
+
+a.button-black.button-outline,
+div.button-black.button-outline,
+label.button-black.button-outline,
+button.button-black.button-outline {
+  border: 1.5px solid var(--reversible-black);
+  color: var(--reversible-black);
+}
+
+div.button-black.button-outline:hover,
+div.button-black.button-outline:active,
+a.button-black.button-outline:hover,
+a.button-black.button-outline:active,
+label.button-black.button-outline:hover,
+label.button-black.button-outline:active,
+button.button-black.button-outline:hover,
+button.button-black.button-outline:active {
+  background-color: var(--reversible-black);
+}
+
+div.button-black.button-outline:hover:active,
+div.button-black.button-outline:active,
+a.button-black.button-outline:hover:active,
+a.button-black.button-outline:active,
+label.button-black.button-outline:hover:active,
+label.button-black.button-outline:active,
+button.button-black.button-outline:hover:active,
+button.button-black.button-outline:active {
+  background-color: var(--reversible-black);
+  box-shadow: inset 0 0 0 10em rgba(153, 153, 153, 0.35);
+}
+
+a.button-black.button-outline:hover,
+a.button-black.button-outline:active,
+a.button-black.button-outline:hover:active,
+div.button-black.button-outline:hover,
+div.button-black.button-outline:active,
+div.button-black.button-outline:hover:active,
+label.button-black.button-outline:hover,
+label.button-black.button-outline:active,
+label.button-black.button-outline:hover:active,
+button.button-black.button-outline:hover,
+button.button-black.button-outline:active,
+button.button-black.button-outline:hover:active {
+  background-color: var(--body-color);
+  color: var(--body-bg-color);
+}
+
+/* Outline */
+
+a.button-outline,
+button.button-outline,
+label.button-outline,
+div.button-outline {
+  background: none;
+}
+
+a.button-outline:hover,
+button.button-outline:hover,
+div.button-outline:hover,
+label.button-outline:hover,
+a.button-outline:hover:active,
+button.button-outline:hover:active,
+div.button-outline:hover:active,
+label.button-outline:hover:active,
+a.button-outline:active,
+div.button-outline:active,
+label.button-outline:active,
+button.button-outline:active {
+  box-shadow: none;
+  color: var(--body-bg-color);
+}
+
+a.button-outline:hover:active,
+button.button-outline:hover:active,
+div.button-outline:hover:active,
+label.button-outline:hover:active,
+a.button-outline:active,
+div.button-outline:active,
+label.button-outline:active,
+button.button-outline:active {
+  box-shadow: inset 0em 0em 0em 10em rgba(0, 0, 0, 0.15);
+}
+
+.button-icon {
+  height: 21px;
+  margin: 0px 7px 0px -3px;
+}
+
+button:disabled,
+button:disabled:hover,
+button:disabled:active,
+button:disabled:hover:active,
+div.button-basic.disabled,
+div.button-basic.disabled:hover,
+div.button-basic.disabled:active,
+div.button-basic.disabled:hover:active,
+label.button-basic.disabled,
+label.button-basic.disabled:hover,
+label.button-basic.disabled:active,
+label.button-basic.disabled:hover:active,
+a.basic-button.disabled,
+a.basic-button.disabled:hover,
+a.basic-button.disabled:active,
+a.basic-button.disabled:hover:active {
+  color: #999;
+  background-color: #9996;
+  box-shadow: none;
+}
+
+button.button-outline:disabled,
+button.button-outline:disabled:hover,
+button.button-outline:disabled:active,
+button.button-outline:disabled:hover:active,
+label.button-outline:disabled,
+label.button-outline:disabled:hover,
+label.button-outline:disabled:active,
+label.button-outline:disabled:hover:active,
+a.button-outline:disabled,
+a.button-outline:disabled:hover,
+a.button-outline:disabled:active,
+a.button-outline:disabled:hover:active,
+div.button-outline.disabled,
+div.button-outline.disabled:hover,
+div.button-outline.disabled:active,
+div.button-outline.disabled:hover:active {
+  color: #999c;
+  border: 1.5px solid #9999;
+  background: none;
+  box-shadow: none;
+}
+
+.button-caret {
+  margin-left: 10px;
+  margin-top: 3px;
+}

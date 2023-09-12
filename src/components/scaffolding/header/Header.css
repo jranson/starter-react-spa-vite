@@ -1,21 +1,35 @@
 .app-header {
-    height: var(--header-height);
-    min-height: var(--header-height);
-    max-height: var(--header-height);
-    background-color: var(--header-bg-color);
-    border-bottom: 1px solid var(--header-border-color);
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  
-  .logo {
-    height: 28px;
-  }
+  height: var(--header-height);
+  min-height: var(--header-height);
+  max-height: var(--header-height);
+  background-color: var(--header-bg-color);
+  border-bottom: 1px solid var(--header-border-color);
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 17px;
+  z-index: 24;
+  position: fixed;
+  width: calc(100vw);
+  top: 0;
+  left: 0;
+}
 
-  .left-header {
-    display: flex;
-    align-items: center;
-  }
+.logo {
+  height: 28px;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  width: calc(100vw);
+  margin: auto;
+}
+
+.app-header .action-icon {
+  color: var(--app-off-white);
+}

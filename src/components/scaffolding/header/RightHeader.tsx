@@ -1,10 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGear } from '@fortawesome/free-solid-svg-icons'
 
-export function RightHeader() {
+type RightHeaderProps = {
+  toggleSettingsMenuFunc?: any
+}
+
+export function RightHeader(props: RightHeaderProps) {
+
+  const { toggleSettingsMenuFunc } = props
+
   return (
-    <div className="left-header">
-      <FontAwesomeIcon id="settingsIcon" icon={faGear} className="action-icon"/>
+    <div className="right-header">
+      {props.toggleSettingsMenuFunc && <FontAwesomeIcon id="settingsIcon" onClick={toggleSettingsMenuFunc}  icon={faGear} className="action-icon"/> }
     </div>
   )
 }

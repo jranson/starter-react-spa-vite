@@ -1,7 +1,7 @@
 .sidebar-container {
   position: relative;
   width: var(--sidebar-width-open);
-  border-right: 1px solid #404042;
+  border-right: 1px solid var(--header-border-color);
   display: flex;
   flex-basis: auto;
   flex-grow: 0;
@@ -9,7 +9,7 @@
   justify-content: flex-end;
   line-height: normal;
   overflow-x: hidden;
-  height: calc(100vh - var(--header-height) - var(--footer-height) );
+  height: calc(100 - var(--header-height) - var(--footer-height) );
   margin-left: 0px;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .sidebar-panel {
-  background-color: #6663;
+  background-color: var(--sidebar-bg-color);
   padding-left: 10px;
   padding-top: 10px;
   display: flex;

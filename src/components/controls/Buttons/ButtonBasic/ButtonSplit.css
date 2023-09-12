@@ -1,0 +1,22 @@
+div.button-split-left {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: none !important;
+}
+
+div.button-split-right {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left-width: .75px;
+    padding-left: 3px;
+}
+
+div.button-split-divider {
+    width: 1.5px;
+    min-width: 1.5px;
+    max-width: 1.5px;
+}
+
+div.button-outline .button-split-divider {
+    background-color: red;
+}

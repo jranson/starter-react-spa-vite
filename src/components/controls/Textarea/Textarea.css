@@ -1,0 +1,6 @@
+textarea.textarea-control {
+    line-height: 28px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    border-radius: var(--input-border-radius);
+}

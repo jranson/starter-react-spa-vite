@@ -1,0 +1,12 @@
+.input-control-checkbox-container {
+  height: 28px;
+
+}
+
+.input-control-checkbox-label {
+  margin-left: 8px;
+}
+
+label.input-control-checkbox-label-disabled {
+  color: var(--app-subtle-color);
+}

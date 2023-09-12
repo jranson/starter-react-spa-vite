@@ -1,0 +1,11 @@
+.input-control-radio-container {
+  height: 28px;
+}
+
+.input-control-radio-label {
+  margin-left: 8px;
+}
+
+label.input-control-checkbox-label-disabled {
+  color: var(--app-subtle-color);
+}
