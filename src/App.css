@@ -10,6 +10,12 @@ main {
 }
 
 .outlet-container {
+  width: 100%;
+  max-height: calc(100vh - var(--header-height) - var(--footer-height));
+  overflow-y: auto;
+}
+
+.outlet-pane {
   min-width: 900px;
   max-width: 1240px;
   margin: auto;
