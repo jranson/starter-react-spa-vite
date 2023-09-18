@@ -224,12 +224,25 @@ input.input-control:disabled::placeholder,
   color: white !important;
 }
 
+.color-accent {
+  color: var(--app-green);
+}
+
+.color-green {
+  color: var(--app-green);
+}
+
 .color-subtle {
   color: var(--app-subtle-color);
 }
 
 .add-border-bottom {
   border-bottom: 1px var(--general-border-color) solid;
+}
+
+/* boldness */
+.font-weight-700 {
+  font-weight: 700;
 }
 
 /* Icons and Buttons (common) */
@@ -242,3 +255,4 @@ input.input-control:disabled::placeholder,
   color: var(--icon-active);
   cursor: pointer;
 }
+

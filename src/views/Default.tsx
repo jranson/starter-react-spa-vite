@@ -76,6 +76,13 @@ export function Default() {
         icon: selectedFolderId === 'Jazz' ? faBookOpen : faBook,
         items: [
           {
+            id: 'All the Things You Are',
+            title: 'All the Things You Are',
+            onClick: listBoxItemClicked,
+            isActive: selectedItemId === 'All the Things You Are',
+            icon: faMusic
+          },
+          {
             id: 'Angel Eyes',
             title: 'Angel Eyes',
             onClick: listBoxItemClicked,
@@ -140,13 +147,10 @@ export function Default() {
 
   return (
     <div className="mb-5 pb-5">
-      <h2>Default Page</h2>
+      <h2>Default Page - Example Components</h2>
       <hr />
-      <h3>Example Components</h3>
 
-      <br />
-
-      <h4>Basic / HTML-ish Controls</h4>
+      <h4 className="color-accent font-weight-700">Basic / HTML-ish Controls</h4>
 
       <BasicPanel className="filled width-xs" title="Hyperlinks">
         <a href="#">Unstyled/unclassed hyperlink</a>
@@ -230,12 +234,12 @@ export function Default() {
         </BasicPanel>
       </div>
 
-      <br />
+      <hr />
 
-      <h4>Complex Controls</h4>
+      <h4 className="color-accent font-weight-700">Complex Controls</h4>
 
       <div style={{display: 'flex'}}>
-        <BasicPanel className="ms-3 width-xs framed" title="PickList Panel">
+        <BasicPanel className="width-xs framed" title="PickList Panel">
           <PickListPanel
               defaultValue={'24h'}
               values={['1h', '3h', '6h', '8h', '12h', '24h', '36h', '3d', '5d', '1w', '2w', '4w', '6w', '8w', '12w', '16w', '26w']}
