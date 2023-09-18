@@ -44,8 +44,7 @@ export default function Textarea (props: TextareaProps) {
       autoCorrect={props.autoCorrect ? 'ON' : 'OFF'}
       autoCapitalize={props.autoCapitalize ? props.autoCapitalize : 'OFF'}
       disabled={props.disabled}
-    >
-      {props.defaultValue}
-    </textarea>
+      defaultValue={props.defaultValue}
+    />
   )
 }

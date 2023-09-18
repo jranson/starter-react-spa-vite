@@ -15,7 +15,7 @@
 
 .sidebar-container.sidebar-reopened {
   margin-left: 0px;
-  animation: .25s 1 alternate slidein;
+  animation: .25s 1 alternate slideinSidebar;
 }
 
 .sidebar-container.sidebar-preclosed {
@@ -26,10 +26,10 @@
 .sidebar-container.sidebar-closed {
   margin-left: calc(var(--sidebar-width-open) * -1);
   border-right: none;
-  animation: .25s 1 alternate slideout;
+  animation: .25s 1 alternate slideoutSidebar;
 }
 
-@keyframes slideout {
+@keyframes slideoutSidebar {
   from {
     margin-left: 0px;
   }
@@ -39,7 +39,7 @@
   }
 }
 
-@keyframes slidein {
+@keyframes slideinSidebar {
   from {
     margin-left: calc(var(--sidebar-width-open) * -1);
   }
