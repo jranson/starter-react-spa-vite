@@ -20,3 +20,16 @@ main {
   max-width: 1240px;
   margin: auto;
 }
+
+.music-list-box .list-box-container {
+  height: 300px;
+  width: 270px;
+}
+
+.music-list-box .list-box-child-item-active svg {
+  color: var(--app-blue);
+}
+
+.music-list-box .list-box-item-active svg {
+  color: var(--app-green);
+}

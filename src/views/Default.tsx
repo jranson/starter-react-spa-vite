@@ -1,4 +1,4 @@
-import { faGear, faHeart, faSliders } from "@fortawesome/free-solid-svg-icons";
+import { faBook, faBookOpen, faGear, faHeart, faMusic, faSliders } from "@fortawesome/free-solid-svg-icons";
 import { ButtonBasic } from "../components/controls/Buttons/ButtonBasic/ButtonBasic";
 import TextInput from "../components/controls/TextInput/TextInput";
 import Textarea from "../components/controls/Textarea/Textarea";
@@ -10,8 +10,14 @@ import Checkbox from "../components/controls/Checkbox/Checkbox";
 import RadioButton from "../components/controls/RadioButton/RadioButton";
 import { PickListPanel } from "../components/controls/Pickers/PickListPanel/PickListPanel";
 import { ButtonGroup } from "../components/controls/ButtonGroup/ButtonGroup";
+import { ListBox } from "../components/controls/Pickers/ListBox/ListBox";
+import { useCallback, useMemo, useState } from "react";
+import { item } from "../components/controls/Pickers/ListBox/item";
 
 export function Default() {
+
+  const [selectedItemId, setSelectedItemId] = useState('')
+  const [selectedFolderId, setSelectedFolderId] = useState('')
 
   const emptyEventFunc = () => {}
 
@@ -23,8 +29,117 @@ export function Default() {
     console.log("radioButtonClicked", e)
   }
 
+  const listBoxItemClicked = useCallback((id: string) => {
+    if (!id) {
+      id = ''
+    }
+    setSelectedItemId(id)
+  }, [selectedItemId, setSelectedItemId])
+
+  const listBoxFolderClicked = useCallback((id: string) => {
+    if (!id || (selectedFolderId && selectedFolderId === id)) {
+      id = ''
+    }
+    setSelectedFolderId(id)
+  }, [selectedFolderId, setSelectedFolderId])
+
+  const items = useMemo(() => {
+    return [
+      {
+        id: 'Classical',
+        title: 'Classical',
+        onClick: listBoxFolderClicked,
+        isActive: selectedFolderId === 'Classical',
+        icon: selectedFolderId === 'Classical' ? faBookOpen : faBook,
+        items: [
+          {
+            id: 'Claire De Lune',
+            title: 'Claire De Lune',
+            onClick: listBoxItemClicked,
+            isActive: selectedItemId === 'Claire De Lune',
+            icon: faMusic
+          },
+          {
+            id: 'Rhapsody in Blue',
+            title: 'Rhapsody in Blue',
+            onClick: listBoxItemClicked,
+            isActive: selectedItemId === 'Rhapsody in Blue',
+            icon: faMusic
+          }
+        ]
+      },
+      {
+        id: 'Jazz',
+        title: 'Jazz',
+        onClick: listBoxFolderClicked,
+        isActive: selectedFolderId === 'Jazz',
+        icon: selectedFolderId === 'Jazz' ? faBookOpen : faBook,
+        items: [
+          {
+            id: 'Angel Eyes',
+            title: 'Angel Eyes',
+            onClick: listBoxItemClicked,
+            isActive: selectedItemId === 'Angel Eyes',
+            icon: faMusic
+          },
+          {
+            id: 'Autumn Leaves',
+            title: 'Autumn Leaves',
+            onClick: listBoxItemClicked,
+            isActive: selectedItemId === 'Autumn Leaves',
+            icon: faMusic
+          },
+          {
+            id: 'Blue Skies',
+            title: 'Blue Skies',
+            onClick: listBoxItemClicked,
+            isActive: selectedItemId === 'Blue Skies',
+            icon: faMusic
+          },
+          {
+            id: 'Caravan',
+            title: 'Caravan',
+            onClick: listBoxItemClicked,
+            isActive: selectedItemId === 'Caravan',
+            icon: faMusic
+          },
+          {
+            id: 'Cheek to Cheek',
+            title: 'Cheek to Cheek',
+            onClick: listBoxItemClicked,
+            isActive: selectedItemId === 'Cheek to Cheek',
+            icon: faMusic
+          },
+          {
+            id: 'Satin Doll',
+            title: 'Satin Doll',
+            onClick: listBoxItemClicked,
+            isActive: selectedItemId === 'Satin Doll',
+            icon: faMusic,
+            disabled: true
+          },
+          {
+            id: 'Summertime',
+            title: 'Summertime',
+            onClick: listBoxItemClicked,
+            isActive: selectedItemId === 'Summertime',
+            icon: faMusic
+          },
+          {
+            id: "Take the 'A' Train",
+            title: "Take the 'A' Train",
+            onClick: listBoxItemClicked,
+            isActive: selectedItemId === "Take the 'A' Train",
+            icon: faMusic
+          }
+        ]
+      }
+    ] as item[]
+  }, [selectedFolderId, selectedItemId])
+
+
   return (
-    <div>
+    <div className="mb-5 pb-5">
       <h2>Default Page</h2>
       <hr />
       <h3>Example Components</h3>
@@ -160,6 +275,11 @@ export function Default() {
             ]} />
           </div>
         </BasicPanel>
+
+        <BasicPanel className="ms-3 width-xs filled" title="ListBox">
+          <ListBox className="music-list-box" title="Select a Genre and Title:" items={items}/>
+        </BasicPanel>
+
       </div>
 
 

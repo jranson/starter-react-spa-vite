@@ -1,0 +1,41 @@
+:root {
+  --list-box-line-height: 34px;
+}
+
+.list-box-item {
+    line-height: var(--list-box-line-height);
+    font-size: 1em;
+    padding-left: 10px;
+    border-bottom: 1px solid var(--app-border-color);
+    display: flex;
+    align-content: center;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.list-box-item:hover {
+    background-color: #8883;
+}
+
+.list-box-child-item-active {
+    background-color: #6663;
+}
+
+.list-box-item-child {
+    padding-left: 20px;
+}
+
+.list-box-item.list-box-item-disabled {
+    color: var(--app-subtle-color);
+    cursor: default;
+}
+
+.list-box-item.list-box-item-disabled:hover {
+    background-color: inherit;
+}
+
+.list-box-item-children {
+    transition: height 120ms;
+    overflow-y: hidden;
+}
