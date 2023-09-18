@@ -1,17 +1,21 @@
 :root {
-  --list-box-line-height: 34px;
-}
+    --list-box-line-height: 34px;
+  }
 
 .list-box-item {
     line-height: var(--list-box-line-height);
     font-size: 1em;
     padding-left: 10px;
-    border-bottom: 1px solid var(--app-border-color);
+    border-top: 1px solid var(--app-border-color);
     display: flex;
     align-content: center;
     cursor: pointer;
     white-space: nowrap;
     overflow-x: hidden;
+}
+
+.list-box-item:first-child {
+    border-top: none;
 }
 
 .list-box-item:hover {
