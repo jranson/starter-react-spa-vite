@@ -24,12 +24,12 @@ export function ListBoxItem(props: ListBoxItemProps) {
       base = `${base} list-box-item-enabled`
     }
     if (item.isActive && !item.disabled) {
-      if (item.items == undefined) {
+      if (item.items === undefined) {
         return`${base} list-box-child-item-active`
       }
       return`${base} list-box-item-active`
     }
-    if (item.items == undefined) {
+    if (item.items === undefined) {
       return`${base} list-box-child-item-inactive`
     }
     return`${base} list-box-item-inactive`
@@ -44,7 +44,7 @@ export function ListBoxItem(props: ListBoxItemProps) {
   }
 
   const childrenBoxStyle = (item: item) => {
-    if (!item.isActive || item.disabled || !item.items || item.items.length == 0) {
+    if (!item.isActive || item.disabled || !item.items || item.items.length === 0) {
       return {height: '0px'} as React.CSSProperties
     }
     return {height: `calc(var(--list-box-line-height) * ${item.items.length})`} as React.CSSProperties
@@ -57,7 +57,7 @@ export function ListBoxItem(props: ListBoxItemProps) {
         {item.icon && <FontAwesomeIcon icon={item.icon} />}
       </div>
       <span>{item.title}</span>
-      {item.isActive && item.items != undefined && item.items.length === 0 && 
+      {item.isActive && item.items !== undefined && item.items.length === 0 && 
         <span className="subtle ms-2">(empty)</span>
       }
     </div>
