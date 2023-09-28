@@ -13,11 +13,13 @@ import { ButtonGroup } from "../components/controls/ButtonGroup/ButtonGroup";
 import { ListBox } from "../components/controls/Pickers/ListBox/ListBox";
 import { useCallback, useMemo, useState } from "react";
 import { item } from "../components/controls/Pickers/ListBox/item";
+import ExampleModal from "../components/ExampleModal";
 
 export function Default() {
 
   const [selectedItemId, setSelectedItemId] = useState('')
   const [selectedFolderId, setSelectedFolderId] = useState('')
+  const [isModalVisible, setIsModalVisible] = useState(false)
 
   const emptyEventFunc = () => {}
 
@@ -286,6 +288,12 @@ export function Default() {
 
       </div>
 
+      <hr />
+
+      <h4 className="color-accent font-weight-700">Modals</h4>
+      
+      <ButtonBasic label="Show the Modal Window" className="mt-3 me-4" onClick={() => {setIsModalVisible(true)}} />
+      {isModalVisible && <ExampleModal closer={() => {setIsModalVisible(false)}} />}
 
     </div>
 

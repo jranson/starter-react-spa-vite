@@ -12,7 +12,7 @@ export function useClickListener(onClick: any) {
   useEffect(() => {
     document.addEventListener('click', handleClickOutside, true)
     return () => {
-      document.removeEventListener('click', handleClickOutside, true)
+    document.removeEventListener('click', handleClickOutside, true)
     }
   })
 

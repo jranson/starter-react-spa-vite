@@ -13,6 +13,7 @@
   --modal-shadow: rgba(0, 4, 8, 1);
   --panel-shadow: 3px 3px 6px black;
   --sidebar-width-open: 240px;
+  --modal-xl-width: 1198px;
  
   /* global color values irrespective of light/dark mdoe */
   --app-blue: #2070f0;
@@ -255,4 +256,3 @@ input.input-control:disabled::placeholder,
   color: var(--icon-active);
   cursor: pointer;
 }
-
