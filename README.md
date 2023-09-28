@@ -17,10 +17,22 @@ $ make install
 
 ## Provides
 
+Scaffolding:
 * Header
-* Left Sidebar
+* Collapsible Left Sidebar
 * Body
 * Footer
+* Light, Dark, High-Contrast Themes
+* Preferences Context
+
+Controls:
+* Buttons (solid, outlined, caret, split buttons, etc.)
+* Button Groups
+* ListBoxes
+* Context Menus
+* Modal Dialogs
+* Pick Lists
+* Panes + Panels
 
 ## Running
 
